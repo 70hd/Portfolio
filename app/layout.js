@@ -10,6 +10,7 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 import RotatingText from "./components/RotatingText";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function RootLayout({ children }) {
   useEffect(() => {
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
           <Footer />
+           <Analytics />
         </body>
       </html>
     </IsHoveringProvider>
