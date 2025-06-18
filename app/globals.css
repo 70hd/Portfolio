@@ -22,8 +22,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #151515;
+  --background: #151515;
+  --foreground: #ffffff;
   --font-primary: "ibrand";
   --font-secondary: "Inter";
   --font-terteri: "PressStart2P";
@@ -32,7 +32,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #151515;
-    --foreground: #ededed;
+    --foreground: #ffffff;
   }
 }
 
