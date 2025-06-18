@@ -1,6 +1,6 @@
 @import "tailwindcss";
 /* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
 
 /* Custom Font-face for ibrand */
 @font-face {
@@ -36,11 +36,12 @@
   }
 }
 
-body {
-  cursor: url("/slack-test.svg") 16 16, auto;
+body { 
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-secondary), Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -160,16 +161,6 @@ p {
     padding-top: 22px;
     padding-bottom: 22px;
   }
-}
-
-.hover {
-  cursor: url(/custom-cursor.svg) 32 32, url(/custom-cursors.svg) 32 32, pointer; /* Custom cursor size (32x32 pixels) */
-  transition: transform 0.3s ease; /* Smooth transition for scale animation */
-}
-
-.contact-me-hover {
-  cursor: url(/custom-cursor.svg) 32 32, url(/custom-cursors.svg) 32 32, pointer; /* Custom cursor size (32x32 pixels) */
-  transition: transform 0.3s ease; /* Smooth transition for scale animation */
 }
 
 .type-writer {

@@ -37,13 +37,11 @@ const steps = [
     description: "Ready for scalable use.",
   },
 ];
-
   return (
-    <div className="w-full relative flex flex-col lg:flex-row dynamic-gap-9 dynamic-padding">
-      {/* Sidebar */}
+    <div className="relative w-full flex flex-col md:flex-row items-start dynamic-gap-9 dynamic-padding">
       <aside
         aria-labelledby="timeline-sidebar-title"
-        className="min-w-[475px] flex flex-col gap-3 lg:sticky top-10 self-start h-fit"
+        className="min-w-[475px] flex flex-col gap-3 md:sticky top-10 self-start h-fit "
       >
         <h2 id="timeline-sidebar-title" className="sr-only">
           Reframe Pilates Website design system
@@ -52,7 +50,6 @@ const steps = [
         <p className="text-white/75">Website design system</p>
       </aside>
 
-      {/* Timeline content */}
       <section
         aria-labelledby="timeline-content-title"
         className="flex-1 flex flex-col"
@@ -62,7 +59,7 @@ const steps = [
         </h2>
         <ul role="list" className="m-0 p-0 flex flex-col dynamic-gap-9">
           {steps.map((step, idx) => (
-            <li key={idx} >
+            <li key={idx}>
               <figure className="flex flex-col dynamic-gap-3">
                 <Image
                   src={step.image}

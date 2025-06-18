@@ -69,7 +69,7 @@ const Timeline = [
 
 function ReframeSection() {
   return (
-    <section className="w-full overflow-x-hidden flex flex-col dynamic-gap-9">
+    <section className="w-full  flex flex-col dynamic-gap-9">
       <ComponentShowcase />
       <TimelineScroll />
       <Testimonial
