@@ -103,7 +103,7 @@ export default function Navbar() {
                 <br /> Incorporating brand personality and stunning visuals to craft the Reframe Pilates design system.
                 <br /> <br />
                 <span className="text-black/75">
-                  Reframe Pilates project
+                  The Little Chihuahua project
                   <br /> 2025
                 </span>
                 <br /> Working with The Little Chihuahua to create a seamless and easy-to-use online presence.

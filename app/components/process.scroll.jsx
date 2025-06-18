@@ -94,6 +94,7 @@ export default function ProcessScroll() {
                 setIsHoveredTestimonial={setScrollIndex}
                 isHoveredTestimonial={scrollIndex}
                 fill
+                noHover={true}
               />
             </nav>
           </div>

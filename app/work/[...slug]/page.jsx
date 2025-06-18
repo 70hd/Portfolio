@@ -121,7 +121,7 @@ const EverlaneSection = () => (
   <div className="flex flex-col dynamic-gap-9 items-center justify-center">
     <BeforeAfterSlider
       title="Before and after"
-      desc="A side-by-side comparison of my Everlane spec website and the current live Everlane site."
+      desc="A side-by-side comparison of the current live Everlane site and my Everlane spec website."
       beforeImage="/everlane-before.png"
       afterImage="/everlane-after.png"
       prevAlt="Everlanes current live website"

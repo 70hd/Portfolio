@@ -8,6 +8,7 @@ export default function TestimonialSelect({
   setHoveredText,
   images,
   nav,
+  noHover
 }) {
   return (
     <div
@@ -19,11 +20,20 @@ export default function TestimonialSelect({
           <div
             key={index}
             onMouseEnter={() => {
-              setIsHoveredTestimonial(index);
-              if (images && !nav) setHoveredText(images[index]);
+              if (!noHover) {
+                setIsHoveredTestimonial(index);
+              }
+              if (images && !nav) {
+                setHoveredText(images[index]);
+              }
             }}
             onMouseLeave={() => {
-              if (images && !nav) setHoveredText("");
+              if (!noHover) {
+                setIsHoveredTestimonial(null);
+              }
+              if (images && !nav) {
+                setHoveredText("");
+              }
             }}
             className={`relative w-full items-center h-fit ${
               nav ? "md:p-3 p-[6px]" : "md:px-3 px-[6px] md:py-6 py-3"
