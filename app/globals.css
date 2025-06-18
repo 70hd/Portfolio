@@ -1,4 +1,20 @@
 @import "tailwindcss";
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Custom Font-face for ibrand */
+@font-face {
+  font-family: "PressStart2P";
+  src: url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ibrand";
+  src: url("/fonts/ibrand.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -7,18 +23,250 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #151515;
+  --font-primary: "ibrand";
+  --font-secondary: "Inter";
+  --font-terteri: "PressStart2P";
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #151515;
     --foreground: #ededed;
   }
 }
 
 body {
+  cursor: url("/slack-test.svg") 16 16, auto;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-secondary), Arial;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  line-height: 125%;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 125%;
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 125%;
+}
+
+.nav-body {
+  font-family: var(--font-terteri);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 125%;
+}
+.dynamic-padding {
+  padding-left: 96px !important;
+  padding-right: 96px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.dynamic-x-padding {
+  padding-left: 96px !important;
+  padding-right: 96px;
+}
+.dynamic-y-padding {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.dynamic-gap-3 {
+  gap: 12px !important;
+}
+.dynamic-gap-6 {
+  gap: 24px !important;
+}
+.dynamic-gap-9 {
+  gap: 36px !important;
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .nav-body {
+    font-size: 8px;
+  }
+}
+@media (max-width: 992px) {
+  .dynamic-gap-3 {
+    gap: 8px;
+  }
+  .dynamic-gap-6 {
+    gap: 16px;
+  }
+  .dynamic-gap-9 {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dynamic-gap-3 {
+    gap: 4px;
+  }
+  .dynamic-gap-6 {
+    gap: 8px;
+  }
+  .dynamic-gap-9 {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dynamic-padding {
+    padding-left: 64px !important;
+    padding-right: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .dynamic-x-padding {
+    padding-left: 64px !important;
+    padding-right: 64px;
+  }
+  .dynamic-y-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dynamic-padding {
+    padding-left: 42px !important;
+    padding-right: 42px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .dynamic-x-padding {
+    padding-left: 42px !important;
+    padding-right: 42px;
+  }
+  .dynamic-y-padding {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
+.hover {
+  cursor: url(/custom-cursor.svg) 32 32, url(/custom-cursors.svg) 32 32, pointer; /* Custom cursor size (32x32 pixels) */
+  transition: transform 0.3s ease; /* Smooth transition for scale animation */
+}
+
+.contact-me-hover {
+  cursor: url(/custom-cursor.svg) 32 32, url(/custom-cursors.svg) 32 32, pointer; /* Custom cursor size (32x32 pixels) */
+  transition: transform 0.3s ease; /* Smooth transition for scale animation */
+}
+
+.type-writer {
+  display: flex;
+  justify-content: start;
+}
+
+.type-writer p {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 1s steps(22) forwards, blink 1s step-end infinite;
+}
+
+.type-writer h1 {
+  display: flex;
+  /* justify-content: center; */
+  font-family: var(--font-primary);
+  font-size: 24px;
+  line-height: 125%;
+  /* margin-inline: auto; */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 1px solid;
+  animation: typing 1s steps(22) forwards, blink 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.tracker {
+  position: fixed;
+  transform: translate(90%, 65%);
+  width: fit-content;
+  max-height: 100px;
+  z-index: 9999;
+  pointer-events: none;
+  transition: all 0.15%;
+  cursor: pointer; /* This will change the cursor to a pointer when hovered */
+}
+
+.tracker svg {
+  width: 100%;
+  width: 100%;
+}
+.pixel-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centers text vertically */
+  justify-content: center; /* Centers text horizontally */
+  min-width: 285px;
+  width: fit-content; /* Match image width */
+  height: 100px; /* Match image height */
+  position: relative;
+}
+
+.pixel-image {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated; /* Ensures pixelated style */
+  position: absolute; /* Keeps image behind text */
+  z-index: 0;
+}
+
+/* Text Styling */
+.pixel-text {
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: "Press Start 2P"; /* Optional: Pixelated font */
+  font-size: 14px;
+  color: white;
+  z-index: 1; /* Ensures text is on top */
+  pointer-events: none; /* Prevents interference with clicks */
+}
+
+/* Hover Effect */
+.pixel-button:hover .pixel-image {
+  filter: brightness(1.2);
+}
+
+/* Click Effect */
+.pixel-button:active .pixel-image,
+.pixel-button:active .pixel-text {
+  transform: translateY(2px); /* Move both image and text when active */
 }

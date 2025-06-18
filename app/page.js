@@ -1,101 +1,91 @@
+"use client";
 import Image from "next/image";
+import ScrambleText from "./components/scrambleText";
+import { useIsHoveringContext } from "./context/cusor-context";
+import Testimonial from "./components/testimonials";
+import Work from "./components/work";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { isHovering, setIsHovering } = useIsHoveringContext();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const servicesData = [
+    {
+      title: "Design",
+      image: "/figma-icon.svg",
+      alt: "Figma logo",
+      color: "#FF99EE",
+      services: [
+        "Portfolio",
+        "Website",
+        "#E-commerce",
+        "#Email design",
+        "#Design system",
+      ],
+    },
+    {
+      title: "Development",
+      image: "/Next-Js-icon.svg",
+      alt: "Next.js logo",
+      color: "#99B1FF",
+      services: [
+        "#Portfolio",
+        "#Website",
+        "#E-commerce",
+        "#Email marketing",
+      ],
+    },
+  ];
+
+  return (
+    <div className="w-full h-fit flex flex-col dynamic-gap-9 mt-6">
+      <Work />
+
+      <Testimonial setHoveredText={setIsHovering} />
+
+      <div className="w-full h-fit dynamic-y-padding flex flex-col dynamic-gap-9">
+        <ScrambleText copy={"Services"} />
+
+        <div className="w-full h-fit dynamic-gap-9 flex md:flex-row flex-col dynamic-x-padding">
+          {servicesData.map((item, index) => (
+            <div
+              key={index}
+              className="w-full min-h-[434px] h-full dynamic-gap-9 flex flex-col justify-between p-6"
+              style={{ backgroundColor: item.color }}
+              onMouseEnter={() => setIsHovering(item.image)}
+              onMouseLeave={() => setIsHovering("")}
+            >
+              <div className="w-fit h-fit flex flex-col dynamic-gap-3">
+                {item.services.map((service, si) => (
+                  <a
+                    key={si}
+                    href={`mailto:kanehfernandez@gmail.com?subject=Inquiry%20about%20a%20custom%20${service
+                      .replace("#", "")
+                      .toLowerCase()}%20project`}
+                    className="inline-block w-fit"
+                  >
+                    <div className="w-fit h-fit flex p-3 bg-white hover:bg-[#DC57A0] hover:text-white border border-black text-black cursor-pointer">
+                      <p className="text-black/75">{service}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              <div className="w-full h-fit flex dynamic-gap-3 items-center">
+                <div className="w-fit h-fit flex p-3 bg-white border border-black text-black">
+                  <Image
+                    src={item.image}
+                    width={15.27}
+                    height={24}
+                    alt={item.alt}
+                    className="min-h-[24px] w-auto"
+                  />
+                </div>
+                <ScrambleText copy={item.title} noPadding={true} />
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }

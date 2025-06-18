@@ -1,0 +1,24 @@
+/* RotatingText.css */
+
+.rotating-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rotating-text {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    animation: spin-slow 6s linear infinite;
+  }
+  
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
