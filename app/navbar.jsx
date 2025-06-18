@@ -33,7 +33,7 @@ export default function Navbar() {
       {/* Primary navbar */}
       <nav
         aria-label="Main navigation"
-        className="sticky top-0 z-[999] bg-[#151515] flex sm:flex-row flex-col justify-between w-full h-[75px] items-start dynamic-padding"
+        className="sticky top-0 z-[999] bg-[#151515] flex sm:flex-row flex-col justify-between w-full h-[75px] sm:items-center items-start dynamic-padding"
       >
         <a href="/" aria-label="Home" className="cursor-pointer">
           <div className="type-writer w-fit">
