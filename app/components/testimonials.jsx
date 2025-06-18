@@ -10,6 +10,8 @@ export default function Testimonial({ setHoveredText }) {
   const [isAnimating, setIsAnimating] = useState(false);
   const containerRef = useRef(null);
 
+
+
   const testimonials = [
     {
       text: "Kane is a warm and friendly person with clearly a passion for website design and development. His sincere desire to do things well was appreciated and noted. I have no doubt that given the right project setting Kane will deliver above and beyond expectations.",
@@ -32,6 +34,7 @@ export default function Testimonial({ setHoveredText }) {
       name: "Dan Wittmer – mentor",
     },
   ];
+
 
   const images = [
     "/reframe-logo.png",

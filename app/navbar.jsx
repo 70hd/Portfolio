@@ -22,6 +22,8 @@ export default function Navbar() {
       } else if (path.includes("/work/tlc")) {
         setTlc(true);
         setIsWorkPage(true);
+      } else if (path !== "/") {
+        setIsWorkPage(true);
       }
     }
   }, []);
@@ -31,7 +33,7 @@ export default function Navbar() {
       {/* Primary navbar */}
       <nav
         aria-label="Main navigation"
-        className="sticky top-0 z-[999] bg-[#151515] flex justify-between w-full h-[75px] items-center dynamic-padding"
+        className="sticky top-0 z-[999] bg-[#151515] flex sm:flex-row flex-col justify-between w-full h-[75px] items-start dynamic-padding"
       >
         <a href="/" aria-label="Home" className="cursor-pointer">
           <div className="type-writer w-fit">
@@ -43,7 +45,10 @@ export default function Navbar() {
           aria-label="Send email to Kane Fernandez"
           className="inline-block w-fit"
         >
-          <ScrambleEmailText copy="San Francisco, California" noPadding={true} />
+          <ScrambleEmailText
+            copy="San Francisco, California"
+            noPadding={true}
+          />
         </a>
       </nav>
 
@@ -59,8 +64,10 @@ export default function Navbar() {
               <h2 id="about-heading">About</h2>
               <p className="text-black/75">
                 Kane Fernandez is a 15-year-old website designer/developer.
-                <br /> He thrives in building high-end websites for small businesses.
-                <br /> He has received mentorship from professional designers and developers, including{' '}
+                <br /> He thrives in building high-end websites for small
+                businesses.
+                <br /> He has received mentorship from professional designers
+                and developers, including{" "}
                 <a
                   href="https://www.linkedin.com/in/ryandavidholmes"
                   target="_blank"
@@ -68,7 +75,8 @@ export default function Navbar() {
                   className="underline"
                 >
                   Ryan Holmes Postscript
-                </a>,{' '}
+                </a>
+                ,{" "}
                 <a
                   href="https://www.linkedin.com/in/asjohnson"
                   target="_blank"
@@ -76,7 +84,8 @@ export default function Navbar() {
                   className="underline"
                 >
                   Andy Johnson United Dsn
-                </a>, and{' '}
+                </a>
+                , and{" "}
                 <a
                   href="https://www.linkedin.com/in/ryandavidholmes"
                   target="_blank"
@@ -84,7 +93,8 @@ export default function Navbar() {
                   className="underline"
                 >
                   Dan Wittmer Youtube
-                </a>. If you have an interesting idea, please get in touch{' '}
+                </a>
+                . If you have an interesting idea, please get in touch{" "}
                 <span className="text-[#DC57A0]" aria-hidden="true">
                   ↗
                 </span>
@@ -100,23 +110,28 @@ export default function Navbar() {
                   Reframe Pilates project
                   <br /> 2024 - 2025
                 </span>
-                <br /> Incorporating brand personality and stunning visuals to craft the Reframe Pilates design system.
+                <br /> Incorporating brand personality and stunning visuals to
+                craft the Reframe Pilates design system.
                 <br /> <br />
                 <span className="text-black/75">
                   The Little Chihuahua project
                   <br /> 2025
                 </span>
-                <br /> Working with The Little Chihuahua to create a seamless and easy-to-use online presence.
+                <br /> Working with The Little Chihuahua to create a seamless
+                and easy-to-use online presence.
                 <br /> <br />
                 <span className="text-black/75">
                   Everlane Spec Project <br /> 2025
                 </span>
-                <br /> Recreated Everlane e-commerce website spec. Mastered developing and designing operational e-commerce site.
+                <br /> Recreated Everlane e-commerce website spec. Mastered
+                developing and designing operational e-commerce site.
                 <br /> <br />
                 <span className="text-black/75">
-                  The Little Chihuahua Merch<br /> 2025
+                  The Little Chihuahua Merch
+                  <br /> 2025
                 </span>
-                <br /> Designing and developing an e-commerce website for The Little Chihuahua merch while maintaining brand integrity.
+                <br /> Designing and developing an e-commerce website for The
+                Little Chihuahua merch while maintaining brand integrity.
               </p>
             </article>
           </div>

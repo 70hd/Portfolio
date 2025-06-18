@@ -20,7 +20,7 @@ export default function TestimonialSelect({
           <div
             key={index}
             onMouseEnter={() => {
-              if (!noHover) {
+              if (!noHover ) {
                 setIsHoveredTestimonial(index);
               }
               if (images && !nav) {
@@ -28,9 +28,6 @@ export default function TestimonialSelect({
               }
             }}
             onMouseLeave={() => {
-              if (!noHover) {
-                setIsHoveredTestimonial(null);
-              }
               if (images && !nav) {
                 setHoveredText("");
               }
