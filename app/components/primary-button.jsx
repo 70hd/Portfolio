@@ -1,9 +1,22 @@
 "use client";
-import React from "react";
-import Link from "next/link";
 
-export default function PixelButton({ cta, onClick, link }) {
-  const isExternal = link.startsWith("http");
+import Link from "next/link";
+import { useState, useEffect } from "react";
+
+export default function CtaText({ cta, link, onClick, isExternal = false }) {
+  const [pixelFontLoaded, setPixelFontLoaded] = useState(false);
+
+  useEffect(() => {
+    document.fonts.load('1em "PressStart2P"').then((loadedFonts) => {
+      if (loadedFonts.length > 0) {
+        setPixelFontLoaded(true);
+      }
+    });
+  }, []);
+
+  const content = pixelFontLoaded
+    ? <span className="pixel-text mb-2">{cta}</span>
+    : <p className="mb-2">{cta}</p>;
 
   return (
     <Link
@@ -22,8 +35,8 @@ export default function PixelButton({ cta, onClick, link }) {
         aria-hidden="true"
         className="pixel-image"
       />
-      {/* Visible button text */}
-      <span className="pixel-text mb-2">{cta}</span>
+      {/* Visible button text or fallback */}
+      {content}
     </Link>
   );
 }

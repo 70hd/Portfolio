@@ -127,7 +127,7 @@ const EverlaneSection = () => (
       prevAlt="Everlanes current live website"
       afterAlt="Everlanes spec redesigned website"
     />
-    <div className="sticky top-0 z-[-100] overflow-hidden h-fit">
+    <div className="w-full sticky top-0 z-[-100] overflow-hidden h-fit">
       <ScrollSteps />
     </div>
 

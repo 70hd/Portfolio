@@ -22,7 +22,7 @@ export default function Testimonial({ setHoveredText }) {
       name: "Andrew Johnstone – design/development, website",
     },
     {
-      text: "Kane doesn’t just build websites—he crafts digital experiences. His expertise in both design and development meant we got a site that’s not only visually stunning but also functions flawlessly across all devices. Couldn’t be happier!",
+      text: "Kane is a dedicated and passionate web creator who consistently delivers solutions that truly meet his clients' needs. I'm always impressed by how intently he listens and how thoughtfully he approaches each challenge. It’s been a real pleasure to mentor Kane and watch him grow into a sharp, capable young professional.",
       name: "Andy Johnson – mentor",
     },
     {
