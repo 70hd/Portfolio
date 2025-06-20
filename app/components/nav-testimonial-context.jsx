@@ -29,7 +29,7 @@ export default function NavTestimonialContext() {
       className="bg-white dynamic-padding flex flex-col md:flex-row dynamic-gap-9 items-center justify-center"
     >
       {/* Selection panel */}
-      <div className="flex flex-col dynamic-gap-3 w-full max-w-[492px]">
+      <div className="flex flex-col dynamic-gap-3 w-full ">
         <h2 id="testimonial-context-heading" className="text-black">
           Context
         </h2>
@@ -49,7 +49,7 @@ export default function NavTestimonialContext() {
         role="region"
         aria-live="polite"
         aria-label="Testimonial description"
-        className="h-fit md:px-12 md:py-6 w-full max-w-[492px]"
+        className="h-fit md:px-12 md:py-6 w-full "
       >
         <p className="text-black/50">
           {descriptions[selectedIndex]}

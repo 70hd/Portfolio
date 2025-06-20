@@ -60,7 +60,7 @@ function CursorTracker() {
 
   return (
     <div className="tracker">
-      {isHovering ? (
+      {isHovering && (isHovering !== "scroll") ? (
         <Image
           src={isHovering}
           width={150}

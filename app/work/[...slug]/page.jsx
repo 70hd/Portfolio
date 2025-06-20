@@ -7,7 +7,6 @@ import ComponentShowcase from "@/app/components/component-showcase";
 import PixelButton from "@/app/components/primary-button";
 import ProcessScroll from "@/app/components/process.scroll";
 import ProsCons from "@/app/components/pros-cons";
-import ScrambleText from "@/app/components/scrambleText";
 import ScrollSteps from "@/app/components/scroll-steps";
 import TwoSectionScroll from "@/app/components/two-section-scroll";
 import TimelineScroll from "@/app/components/timeline-scroll";
@@ -26,7 +25,9 @@ const Testimonial = ({ desc, title, cta, link }) => (
     </div>
     <PixelButton cta={cta} link={link} />
   </section>
-);
+);  
+
+
 
 const Timeline = [
   {
@@ -83,6 +84,7 @@ function ReframeSection() {
 }
 
 function TLCSection() {
+  
   return (
     <section className="w-full overflow-x-hidden flex flex-col dynamic-gap-9">
       <BeforeAfterSlider
@@ -117,7 +119,8 @@ function TLCSection() {
   );
 }
 
-const EverlaneSection = () => (
+const EverlaneSection = () => {
+  return (
   <div className="flex flex-col dynamic-gap-9 items-center justify-center">
     <BeforeAfterSlider
       title="Before and after"
@@ -140,7 +143,7 @@ const EverlaneSection = () => (
       />
     </div>
   </div>
-);
+)};
 
 const Work = ({ params }) => {
   const { slug } = React.use(params);

@@ -5,9 +5,6 @@ export default function RotatingText() {
   const circleRef = useRef(null);
 
   useEffect(() => {
-    // Only initialize on screens ≥ 640px (Tailwind 'sm')
-    if (!window.matchMedia("(min-width: 640px)").matches) return;
-
     const letters = "200911★302009★".split(""); // Your circular text
     const circle = circleRef.current;
     const radius = 50; // Adjust radius for spacing
@@ -30,7 +27,7 @@ export default function RotatingText() {
   }, []);
 
   return (
-    <div className="hidden sm:block rotating-text-container p1 text-[#DC57A0]">
+    <div className="rotating-text-container p1 text-[#DC57A0]">
       <div ref={circleRef} className="rotating-text"></div>
     </div>
   );
