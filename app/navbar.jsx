@@ -87,7 +87,7 @@ export default function Navbar() {
                 </a>
                 , and{" "}
                 <a
-                  href="https://www.linkedin.com/in/ryandavidholmes"
+                  href="https://www.linkedin.com/in/wittmer/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
@@ -114,20 +114,20 @@ export default function Navbar() {
                 craft the Reframe Pilates design system.
                 <br /> <br />
                 <span className="text-black/75">
-                  The Little Chihuahua project
+                  The Little Chihuahua email marketing project
                   <br /> 2025
                 </span>
                 <br /> Working with The Little Chihuahua to create a seamless
-                and easy-to-use online presence.
+                and high performing emails.
                 <br /> <br />
                 <span className="text-black/75">
-                  Everlane Spec Project <br /> 2025
+                  Everlane spec project <br /> 2025
                 </span>
                 <br /> Recreated Everlane e-commerce website spec. Mastered
                 developing and designing operational e-commerce site.
                 <br /> <br />
                 <span className="text-black/75">
-                  The Little Chihuahua Merch
+                  The Little Chihuahua merch
                   <br /> 2025
                 </span>
                 <br /> Designing and developing an e-commerce website for The

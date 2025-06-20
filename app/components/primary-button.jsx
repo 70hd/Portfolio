@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function CtaText({ cta, link, onClick, isExternal = false }) {
+export default function CtaText({ cta, link, onClick }) {
   const [pixelFontLoaded, setPixelFontLoaded] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function CtaText({ cta, link, onClick, isExternal = false }) {
       href={link}
       className="pixel-button cursor-pointer"
       onClick={onClick}
-      {...(isExternal
+      {...(link.includes("http")
         ? { target: "_blank", rel: "noopener noreferrer" }
         : {})}
       aria-label={cta}

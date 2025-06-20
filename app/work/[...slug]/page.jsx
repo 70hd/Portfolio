@@ -76,8 +76,8 @@ function ReframeSection() {
       <Testimonial
         desc="Kane is a warm and friendly person with a passion for design. His sincere desire to do things well was appreciated."
         title="-Kane Fernandez"
-        cta="View live website"
-        link="https://everlane-spec-project.vercel.app/"
+        cta="View design system"
+        link="https://www.figma.com/design/bQhpXStiS91O7HrvQEqCD2/RE-FRAME-PILATES-WEBISTE?node-id=0-1&t=BMAyvrbKC7LeI31F-1"
       />
     </section>
   );
