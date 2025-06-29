@@ -30,7 +30,7 @@ export default function Testimonial({ setHoveredText }) {
       name: "Ryan Holmes – mentor",
     },
     {
-      text: "I needed a developer who could handle both frontend and backend work seamlessly, and Kane exceeded all expectations. His coding is clean, his designs are intuitive, and his problem-solving skills are top-notch. Will definitely work with him again!",
+      text: "Kane demonstrates great drive, determination and technical horsepower developing solutions to drive complex websites. From breaking down a problem, to brainstorming solutions and talking through high level approaches / techniques Kane shows great awareness and understanding. It’s been rewarding being able to work with him and help him grow.",
       name: "Dan Wittmer – mentor",
     },
   ];
