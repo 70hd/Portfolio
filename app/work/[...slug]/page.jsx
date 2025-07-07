@@ -75,7 +75,7 @@ function ReframeSection() {
       <TimelineScroll />
       <Testimonial
         desc="Kane is a warm and friendly person with a passion for design. His sincere desire to do things well was appreciated."
-        title="-Kane Fernandez"
+        title="-Natalie Gabellone"
         cta="View design system"
         link="https://www.figma.com/design/bQhpXStiS91O7HrvQEqCD2/RE-FRAME-PILATES-WEBISTE?node-id=0-1&t=BMAyvrbKC7LeI31F-1"
       />
@@ -110,8 +110,8 @@ function TLCSection() {
         ))}
       </div>
       <Testimonial
-        desc="Kane is a warm and friendly person with a passion for design. His sincere desire to do things well was appreciated."
-        title="-Kane Fernandez"
+        // desc="Kane is a warm and friendly person with a passion for design. His sincere desire to do things well was appreciated."
+        // title="- Andrew Johnstone"
         cta="View live website"
         link="https://www.thelittlechihuahuamerch.com/"
       />
